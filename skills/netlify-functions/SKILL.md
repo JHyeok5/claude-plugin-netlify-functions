@@ -587,6 +587,12 @@ Before deploying any function:
 7. **Set timeouts**: Default is 10s (free) / 26s (paid). Design functions to complete within limits
 8. **Idempotent webhooks**: External services may retry — handle duplicate events gracefully
 
+## Bundled Resources
+
+### References
+
+- **`references/handler-patterns.md`**: Full implementation code for the createHandler wrapper, error response utility, webhook signature verification (Stripe, GitHub, generic HMAC), and auth middleware by provider (Supabase, Firebase, Custom JWT). Copy-paste ready TypeScript.
+
 ## References
 
 - [Netlify Functions overview](https://docs.netlify.com/functions/overview/)
