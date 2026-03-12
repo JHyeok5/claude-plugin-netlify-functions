@@ -1,0 +1,12 @@
+{
+  "name": "netlify-functions",
+  "version": "1.0.0",
+  "description": "Scaffold and implement production-ready Netlify Functions — handler patterns, CORS, auth, webhooks, cron, error handling, TypeScript",
+  "author": {
+    "name": "JHyeok5",
+    "url": "https://github.com/JHyeok5"
+  },
+  "repository": "https://github.com/JHyeok5/claude-plugin-netlify-functions",
+  "license": "MIT",
+  "keywords": ["netlify", "serverless", "functions", "api", "backend", "webhooks", "typescript"]
+}
