@@ -8,5 +8,6 @@
   },
   "repository": "https://github.com/JHyeok5/claude-plugin-netlify-functions",
   "license": "MIT",
-  "keywords": ["netlify", "serverless", "functions", "api", "backend", "webhooks", "typescript"]
+  "keywords": ["netlify", "serverless", "functions", "api", "backend", "webhooks", "typescript"],
+  "hooks": "./hooks/hooks.json"
 }

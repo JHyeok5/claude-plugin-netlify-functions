@@ -266,3 +266,36 @@ export function verifyAuth(headers: Headers) {
   }
 }
 ```
+
+## Scheduled Function (Cron)
+
+```typescript
+// netlify/functions/daily-cleanup.ts
+import { Config } from "@netlify/functions";
+
+export default async () => {
+  console.log("Running daily cleanup...");
+
+  try {
+    const result = await performCleanup();
+    console.log(`Cleanup complete: ${result.deleted} records removed`);
+  } catch (error) {
+    // Log but don't throw — no client to receive the error
+    console.error("Cleanup failed:", error);
+  }
+};
+
+// Cron expression: minute hour day month weekday
+export const config: Config = {
+  schedule: "0 3 * * *", // Daily at 3:00 AM UTC
+};
+```
+
+**Common cron schedules:**
+
+| Schedule | Expression | Use Case |
+|----------|-----------|----------|
+| Every hour | `0 * * * *` | Cache refresh |
+| Daily 3 AM | `0 3 * * *` | Cleanup, reports |
+| Weekly Monday | `0 9 * * 1` | Weekly digest |
+| Every 5 min | `*/5 * * * *` | Health check (use sparingly) |

@@ -55,6 +55,15 @@ Or describe your need — auto-triggers on Netlify tasks:
 | Clerk | `clerkClient.verifyToken(token)` |
 | Custom JWT | `jsonwebtoken.verify(token, secret)` |
 
+## Auto-Check Hook
+
+When installed, the plugin monitors new Netlify Function files:
+- Warns if CORS handling (OPTIONS preflight) is missing
+- Warns if error handling (try/catch) is missing
+- Checks TypeScript type annotations
+
+Runs automatically when files in `netlify/functions/` are created or edited.
+
 ## Self-Improvement
 
 The skill creates `.netlify-fn/` in your project on first run:
